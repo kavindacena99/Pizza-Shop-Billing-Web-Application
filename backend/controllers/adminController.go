@@ -110,7 +110,15 @@ func UpdateAdminProfile(c *gin.Context) {
 
 	admin.FullName = input.Name
 	admin.Username = input.Username
-	admin.Password = input.Password
+
+	if input.Password != "" {
+		hashedPassword, err := services.HashPassword(input.Password)
+		if err != nil {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to hash password"})
+			return
+		}
+		admin.Password = hashedPassword
+	}
 
 	if err := database.DB.Save(&admin).Error; err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to update profile"})

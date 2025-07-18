@@ -21,6 +21,7 @@ function AdminLogin(){
             
             Navigate('/store');
         }catch(error){
+            alert("Login failed! Please check your credentials.");
             setError("Login failed! Please check your credentials.");
         }
     };
@@ -30,11 +31,11 @@ function AdminLogin(){
             <form onSubmit={handleLogin}>
                 <div className="mb-3 col-md-8">
                     <label className="form-label">Username</label>
-                    <input type="text" id="username" className="form-control" value={username} onChange={(e) => setUsername(e.target.value)} />
+                    <input type="text" id="username" className="form-control" value={username} onChange={(e) => setUsername(e.target.value)} required />
                 </div>
                 <div className="mb-3 col-md-8">
                     <label className="form-label">Password</label>
-                    <input type="password" id="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <input type="password" id="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} required />
                 </div>
                 <button type="submit" className="btn btn-dark">Login</button>
             </form>

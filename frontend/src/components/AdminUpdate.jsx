@@ -1,3 +1,4 @@
+import { Navigate } from "react-router-dom";
 import API from "../services/api";
 import { useState } from "react";
 
@@ -7,35 +8,6 @@ function AdminUpdate(){
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
-
-    useEffect(() => {
-        const token = localStorage.getItem('token');
-        if (!token) {
-            navigate('/');
-            return;
-        }
-
-        const fetchAdminProfile = async () => {
-            try {
-                const response = await API.get('/admin/profile', {
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    },
-                });
-                const { name, username } = response.data;
-                setName(name);
-                setUsername(username);
-            } catch (error) {
-                if (error.response?.status === 401) {
-                    navigate('/admin/login');
-                } else {
-                    setError("Failed to fetch admin profile.");
-                }
-            }
-        };
-
-        fetchAdminProfile();
-    }, [navigate]);
 
     const handleUpdate = async (e) => {
         e.preventDefault();
@@ -50,7 +22,8 @@ function AdminUpdate(){
                     Authorization: `Bearer ${token}`,
                 },
             });
-            setSuccess("Profile updated successfully");
+            alert("Profile updated successfully");
+            window.location.reload();
         } catch (err) {
             setError("Failed to update profile");
         }

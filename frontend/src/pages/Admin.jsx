@@ -28,7 +28,7 @@ function Admin(){
                 setUsername(username);
             } catch (error) {
                 if (error.response && error.response.status === 401) {
-                    navigate('/admin/login');
+                    navigate('/');
                 } else {
                     setError("Failed to fetch admin profile. Please try again later.");
                 }
