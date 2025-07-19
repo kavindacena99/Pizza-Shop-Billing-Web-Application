@@ -63,17 +63,39 @@ Frontend runs at: http://localhost:5173
 
 Backend API runs at: http://localhost:8080
 
-📸 Screenshots (Replace These)
-🖥️ Login Page
+## 🖥️ Login Page
 
-🧾 Item List Page
 
-✅ Checkout Page
+![Login Page](readmescreenshots/login.png)
+
+## 🧾 Item List Page
+
+
+![Login Page](readmescreenshots/store1.png)
+
+
+![Login Page](readmescreenshots/store2.png)
+
+
+![Login Page](readmescreenshots/store3.png)
+
+## ✅ Admin Details Update
+
+
+![Login Page](readmescreenshots/update.png)
+
+## ✅ Checkout Page
+
+
+![Login Page](readmescreenshots/checkout.png)
 
 ## 🖨️ Printed Bill 
 
 
 ![Login Page](readmescreenshots/bill.png)
+
+
+### 🎨 4. Run Frontend
 
 🔒 Admin Info
 Default Username: admin
@@ -94,7 +116,7 @@ Total includes 10% tax.
 Uses React Router to protect routes from unauthorized access.
 
 ✍️ Author
-Developed by [Your Name] – Final Year Project
+Developed by Kavinda Supun Dissanayake
 
 🧾 License
 This project is for educational purposes only. Contact me for permission if you want to use it commercially.

@@ -52,7 +52,6 @@ function Itemgrid({ selectedCategories }) {
         console.log("Checkout payload:", checkoutItems);
 
         try {
-            await API.post('/checkout', checkoutItems);
             alert("Checkout successful!");
             navigate("/checkout", { state: { selectedItems: checkoutItems } });
             setSelectedItems({});
