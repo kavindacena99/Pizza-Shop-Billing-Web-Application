@@ -78,7 +78,7 @@ func AdminProfile(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, gin.H{
-		"name":     admin.FullName,
+		"fullname": admin.FullName,
 		"username": admin.Username,
 	})
 }

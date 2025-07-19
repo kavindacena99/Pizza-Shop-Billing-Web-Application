@@ -3,6 +3,7 @@ package database
 import (
 	"backend/models"
 	"fmt"
+
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -20,4 +21,5 @@ func ConnectDatabase() {
 	fmt.Println("Connected to database!")
 
 	DB.AutoMigrate(&models.Admin{})
+	DB.AutoMigrate(&models.Item{})
 }

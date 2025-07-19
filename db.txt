@@ -1,0 +1,32 @@
+create database pizza_shop_billing_web;
+
+use pizza_shop_billing_web;
+
+CREATE TABLE admins (
+  id BIGINT(20) NOT NULL AUTO_INCREMENT,
+  username LONGTEXT,
+  full_name LONGTEXT,
+  password LONGTEXT,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO admins (username, full_name, password) VALUES ('admin', 'admin', '$2a$10$Ny4JkV2A95i4nb4WH24u4eGuh6fn58oga3Kw/aUaS5nAgH4oYAj9G'); // admin123
+
+CREATE TABLE items (
+  id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  name LONGTEXT,
+  category LONGTEXT,
+  price DOUBLE,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO items (name, category, price) VALUES
+('Margherita', 'Pizza', 350.00),
+('Pepperoni', 'Pizza', 450.00),
+('BBQ Chicken', 'Pizza', 500.00),
+('Mushrooms', 'Topping', 75.00),
+('Olives', 'Topping', 65.00),
+('Extra Cheese', 'Topping', 100.00),
+('Coke', 'Beverage', 90.00),
+('Lemon Iced Tea', 'Beverage', 95.00),
+('Mango Smoothie', 'Beverage', 120.00);

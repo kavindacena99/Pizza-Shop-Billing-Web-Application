@@ -1,4 +1,3 @@
-import { Navigate } from "react-router-dom";
 import API from "../services/api";
 import { useState } from "react";
 
@@ -31,24 +30,24 @@ function AdminUpdate(){
 
     return(
         <div>
-            <form onSubmit={handleUpdate}>
-                <div className="container mt-5 pt-5">
-                    <h2>Update Admin Details</h2>
-                    <div className="mb-3 col-md-8">
+            <div className="container col-md-5">
+                <form onSubmit={handleUpdate}>
+                    <h2><b>Update Admin Details</b></h2>
+                    <div className="mb-3">
                         <label className="form-label">Full Name</label>
-                        <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="form-control" />
+                        <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="form-control" required />
                     </div>
-                    <div className="mb-3 col-md-8">
+                    <div className="mb-3">
                         <label className="form-label">Username</label>
-                        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="form-control" />
+                        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="form-control" required />
                     </div>
-                    <div className="mb-3 col-md-8">
+                    <div className="mb-3">
                         <label className="form-label">Password</label>
-                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="form-control" />
+                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="form-control" required />
                     </div>
                     <button type="submit" className="btn btn-dark">Update Details</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     );
 }

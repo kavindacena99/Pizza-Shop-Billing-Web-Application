@@ -4,9 +4,10 @@ import (
 	"backend/database"
 	"backend/routes"
 
+	"time"
+
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"time"
 )
 
 func main() {
@@ -23,6 +24,7 @@ func main() {
 	database.ConnectDatabase()
 
 	routes.RegisterAdminRoutes(r)
+	routes.RegisterItemRoutes(r)
 
 	r.Run(":8080")
 }

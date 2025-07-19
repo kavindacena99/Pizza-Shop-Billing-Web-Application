@@ -8,7 +8,6 @@ import (
 )
 
 func RegisterAdminRoutes(r *gin.Engine) {
-	r.GET("/adminlogin", controllers.AdminLogin)
 	r.POST("/admin/login", controllers.AdminLogin)
 	r.POST("/admin/register", controllers.AdminRegister)
 	r.GET("/admin/profile", middleware.AuthMiddleware(), controllers.AdminProfile)
