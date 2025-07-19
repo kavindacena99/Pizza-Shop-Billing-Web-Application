@@ -70,7 +70,9 @@ Backend API runs at: http://localhost:8080
 
 ✅ Checkout Page
 
-🖨️ Printed Bill
+## 🖨️ Printed Bill 
+
+
 ![Login Page](readmescreenshots/bill.png)
 
 🔒 Admin Info
