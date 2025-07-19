@@ -1,5 +1,3 @@
-create database pizza_shop_billing_web;
-
 use pizza_shop_billing_web;
 
 CREATE TABLE admins (
@@ -10,7 +8,7 @@ CREATE TABLE admins (
   PRIMARY KEY (id)
 );
 
-INSERT INTO admins (username, full_name, password) VALUES ('admin', 'admin', '$2a$10$Ny4JkV2A95i4nb4WH24u4eGuh6fn58oga3Kw/aUaS5nAgH4oYAj9G'); // admin123
+INSERT INTO admins (username, full_name, password) VALUES ('admin', 'admin', '$2a$10$6Y2r7LF7RJQRUX9u7WkxiO32DS1loQdJqtdhIOm7D6B7.pb/u.swy');
 
 CREATE TABLE items (
   id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
