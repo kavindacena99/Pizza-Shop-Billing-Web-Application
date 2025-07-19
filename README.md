@@ -33,7 +33,8 @@ A full stack Pizza Shop Billing Web Application built with **Gin (Golang)**, **R
 
 git clone https://github.com/kavindacena99/Pizza-Shop-Billing-Web-Application.git
 cd Pizza-Shop-Billing-Web-Application
-💾 2. Setup MySQL Database
+
+### 💾 2. Setup MySQL Database
 Create a database named pizza_shop
 
 Import tables using your schema
@@ -48,13 +49,13 @@ CREATE TABLE items (
 );
 Ensure admin table is created and has default values:
 INSERT INTO admins (username, password, fullname) VALUES ('admin', 'admin123', 'Administrator');
-🧱 3. Run Backend
+### 🧱 3. Run Backend
 cd Backend
 go mod tidy
 go run main.go
 Make sure your MySQL connection details are correctly set in the backend code (e.g., database/database.go).
 
-🎨 4. Run Frontend
+### 🎨 4. Run Frontend
 cd Frontend
 npm install
 npm run dev
@@ -70,6 +71,7 @@ Backend API runs at: http://localhost:8080
 ✅ Checkout Page
 
 🖨️ Printed Bill
+![Login Page](readmescreenshots/bill.png)
 
 🔒 Admin Info
 Default Username: admin
