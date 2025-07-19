@@ -35,7 +35,7 @@ git clone https://github.com/kavindacena99/Pizza-Shop-Billing-Web-Application.gi
 cd Pizza-Shop-Billing-Web-Application
 
 ### 💾 2. Setup MySQL Database
-Create a database named pizza_shop
+Create a database named pizza_shop_billing_web
 
 Import tables using your schema
 
@@ -95,7 +95,7 @@ Backend API runs at: http://localhost:8080
 ![Login Page](readmescreenshots/bill.png)
 
 
-### 🎨 4. Run Frontend
+### 🎨 5. Other
 
 🔒 Admin Info
 Default Username: admin
@@ -120,3 +120,5 @@ Developed by Kavinda Supun Dissanayake
 
 🧾 License
 This project is for educational purposes only. Contact me for permission if you want to use it commercially.
+
+https://github.com/kavindacena99/Pizza-Shop-Billing-Web-Application/blob/main/README.md
