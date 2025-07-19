@@ -19,28 +19,9 @@ A full stack Pizza Shop Billing Web Application built with **Gin (Golang)**, **R
 
 ---
 
-## 📂 Project Structure
-
-Pizza-Shop-Billing-Web-Application/
-│
-├── Backend/ → Gin + MySQL (Golang)
-│ └── main.go
-│
-├── Frontend/ → React.js + Tailwind CSS
-│ └── src/
-│ └── components/
-│ └── pages/
-│ └── App.jsx
-
-yaml
-Copy
-Edit
-
----
-
 ## 🛠️ Tech Stack
 
-- **Frontend**: React.js + Tailwind CSS
+- **Frontend**: React.js + Bootstrap
 - **Backend**: Gin (Golang)
 - **Database**: MySQL
 
@@ -50,8 +31,7 @@ Edit
 
 ### 🔧 1. Clone the Repository
 
-```bash
-git clone https://github.com/your-username/Pizza-Shop-Billing-Web-Application.git
+git clone https://github.com/kavindacena99/Pizza-Shop-Billing-Web-Application.git
 cd Pizza-Shop-Billing-Web-Application
 💾 2. Setup MySQL Database
 Create a database named pizza_shop
@@ -60,9 +40,6 @@ Import tables using your schema
 
 Example table structure for items:
 
-sql
-Copy
-Edit
 CREATE TABLE items (
   id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   name LONGTEXT,
@@ -70,24 +47,14 @@ CREATE TABLE items (
   price DOUBLE
 );
 Ensure admin table is created and has default values:
-
-sql
-Copy
-Edit
 INSERT INTO admins (username, password, fullname) VALUES ('admin', 'admin123', 'Administrator');
 🧱 3. Run Backend
-bash
-Copy
-Edit
 cd Backend
 go mod tidy
 go run main.go
 Make sure your MySQL connection details are correctly set in the backend code (e.g., database/database.go).
 
 🎨 4. Run Frontend
-bash
-Copy
-Edit
 cd Frontend
 npm install
 npm run dev
